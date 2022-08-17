@@ -1,0 +1,25 @@
+.authorization {
+    padding: 50px 0;
+    &__inner {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 90px;
+    }
+    &__info {
+        margin: 18px 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .authorization {
+        padding: 30px 0;
+        &__inner {
+            margin-top: 30px;
+        }
+        &__info {
+            display: block;
+        }
+    }
+}

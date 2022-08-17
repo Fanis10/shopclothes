@@ -1,0 +1,14 @@
+.nav {
+    padding: 60px;
+    &__list {
+        li {
+            font-size: 20px;
+            line-height: 120%;
+            font-weight: 120%;
+            color: #000;
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+    }
+}

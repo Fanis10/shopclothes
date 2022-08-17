@@ -1,0 +1,18 @@
+.registration {
+    padding: 50px 0;
+    &__inner {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .registration {
+        padding: 30px 0;
+        &__inner {
+            margin-top: 30px;
+        }
+    }
+}

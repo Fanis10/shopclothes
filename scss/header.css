@@ -53,8 +53,8 @@
     .header-center__registration:hover {
       color: #EC5658; }
   .header-center .burger {
-    width: 35px;
-    height: 20px;
+    width: 25px;
+    height: 10px;
     margin-left: 25px;
     cursor: pointer;
     position: relative;
@@ -63,7 +63,7 @@
     display: none; }
     .header-center .burger span {
       width: 100%;
-      height: 3px;
+      height: 2px;
       transition: all 0.3s;
       background-color: #000000; }
       .header-center .burger span:nth-child(1) {
@@ -71,17 +71,11 @@
         top: 0; }
       .header-center .burger span:nth-child(2) {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%); }
-      .header-center .burger span:nth-child(3) {
-        position: absolute;
         bottom: 0; }
     .header-center .burger--active span:nth-child(1) {
       transform: rotate(-45deg);
       top: 50%; }
     .header-center .burger--active span:nth-child(2) {
-      display: none; }
-    .header-center .burger--active span:nth-child(3) {
       transform: rotate(45deg);
       top: 50%; }
 .header-bottom {
@@ -143,13 +137,15 @@
   .header-bottom__mob-list {
     display: none; }
   .header-bottom__search {
-    position: relative; }
+    position: relative;
+    display: flex;
+    align-items: center; }
     .header-bottom__search-mob {
       display: none; }
     .header-bottom__search--two {
       margin-bottom: 15px; }
-    .header-bottom__search input {
-      width: 330px;
+    .header-bottom__search .search-input {
+      width: 285px;
       height: 45px;
       background: #F5F5F5;
       border: none;
@@ -158,16 +154,20 @@
       line-height: 17px;
       color: #000000;
       padding: 0 15px; }
-    .header-bottom__search button {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      right: 15px;
-      transform: translate(0, -50%);
-      cursor: pointer; }
+    .header-bottom__search .search-btn {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      padding: 0;
+      background: #F5F5F5;
+      float: right; }
+      .header-bottom__search .search-btn .icon-close {
+        display: none; }
   .header-bottom__line {
     border-bottom: 1px solid #E4E3E3;
     align-items: flex-end; }
+.header-mob {
+  display: none; }
 
 @media screen and (max-width: 1200px) {
   .header-center__entrance {
@@ -176,8 +176,8 @@
     margin-left: 15px; } }
 @media screen and (max-width: 992px) {
   .header-center__inner {
-    justify-content: end; }
-  .header-center__left {
+    justify-content: space-between; }
+  .header-center__nav {
     display: none; }
   .header-center__entrance {
     margin-left: 40px; }
@@ -188,27 +188,113 @@
   .header-bottom__removal {
     display: none; }
   .header-bottom__search-mob {
-    display: block; } }
+    display: flex; } }
 @media screen and (max-width: 768px) {
   .header-top {
     padding: 10px 0; }
     .header-top__text {
-      font-size: 10px; }
+      font-size: 8px; }
   .header-center__telephone {
     display: none; }
   .header-center .burger {
-    width: 30px;
-    height: 15px;
-    margin-left: 20px; }
+    display: block; }
+    .header-center .burger--active {
+      position: absolute;
+      top: 18px;
+      right: 16px; }
   .header-bottom {
     padding: 10px 0 0; }
     .header-bottom__bottom {
       margin-top: 10px; }
     .header-bottom__logo svg {
       width: 150px; }
+    .header-bottom__favourites {
+      margin-left: 25px; }
     .header-bottom__link:not(:first-child) {
       margin-left: 15px; }
-    .header-bottom__search-mob input::placeholder {
-      display: none; } }
+    .header-bottom__search-mob {
+      position: relative;
+      margin-left: auto; }
+      .header-bottom__search-mob input::placeholder {
+        display: none; }
+      .header-bottom__search-mob .search-input {
+        width: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0; }
+        .header-bottom__search-mob .search-input--active {
+          width: 285px;
+          transition: all 0.3s;
+          padding: 0 15px; }
+      .header-bottom__search-mob .search-btn {
+        position: relative;
+        z-index: 2;
+        background-color: transparent; }
+        .header-bottom__search-mob .search-btn .icon-search {
+          color: #000000; }
+        .header-bottom__search-mob .search-btn--active {
+          background: #F5F5F5; }
+          .header-bottom__search-mob .search-btn--active .icon-search {
+            display: none; }
+          .header-bottom__search-mob .search-btn--active .icon-close {
+            display: block; }
+        .header-bottom__search-mob .search-btn:hover {
+          background: #F5F5F5;
+          transition: all 0.3s; }
+  .header-mob {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .header-mob::-webkit-scrollbar {
+      width: 3px;
+      height: 10px; }
+    .header-mob::-webkit-scrollbar-track {
+      background: #D9D9D9; }
+    .header-mob::-webkit-scrollbar-thumb {
+      background: #000000; }
+    .header-mob--active {
+      left: 0; }
+    .header-mob__inner {
+      padding: 0 30px; }
+    .header-mob__items {
+      padding-bottom: 34px; }
+    .header-mob__nav {
+      display: block;
+      border-top: 1px solid #E9E9E9;
+      border-bottom: 1px solid #E9E9E9;
+      padding: 34px 0 24px; }
+    .header-mob__list {
+      display: block; }
+      .header-mob__list li:not(:first-child) {
+        margin-top: 25px;
+        margin-left: 0; }
+    .header-mob__telephone {
+      display: block;
+      padding-top: 28px; } }
+@media screen and (max-width: 576px) {
+  .header-bottom .search-input--active {
+    width: 225px; }
+  .header-bottom__bottom {
+    display: none; }
+  .header-bottom__favourites {
+    margin-left: 10px; }
+  .header-bottom__basket {
+    margin-left: 10px; } }
+@media screen and (max-width: 360px) {
+  .header-bottom__logo svg {
+    width: 128px; }
+  .header-bottom .search-input--active {
+    width: 180px; } }
 
 /*# sourceMappingURL=header.css.map */

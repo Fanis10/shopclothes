@@ -19,10 +19,7 @@ function sliderImages() {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
-            },
-            576: {
-                slidesPerView: 2,
+                slidesPerView: "auto",
             },
             992: {
                 slidesPerView: 3,
@@ -46,7 +43,7 @@ function sliderProduct() {
         },
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
             576: {
                 slidesPerView: 2,
@@ -65,7 +62,7 @@ function sliderCard() {
     var swiper = new Swiper('.sale__content-slider .sale__swiper', {
         spaceBetween: 20,
         slidesPerView: 4,
-        allowTouchMove: false,
+
         navigation: {
             nextEl: '.sale__content-slider .swiper-button-next',
             prevEl: '.sale__content-slider .swiper-button-prev',
@@ -75,18 +72,19 @@ function sliderCard() {
             clickable: true,
         },
         breakpoints: {
+
             320: {
-                slidesPerView: 1,
-            },
-            576: {
-                slidesPerView: 2,
+                slidesPerView: "auto",
+                allowTouchMove: true,
             },
             992: {
                 slidesPerView: 3,
+                allowTouchMove: false,
             },
 
             1450: {
                 slidesPerView: 4,
+                allowTouchMove: false,
             },
 
         }
@@ -134,6 +132,7 @@ function cardProducts() {
         cardProductsArray[index] = new Swiper(`.sale__content-slider2[data-slider-id = "${index}"] .swiper`, {
             slidesPerView: 1,
             centeredSlides: 'true',
+            allowTouchMove: false,
             loop: true,
             pagination: {
                 el: `.sale__content-slider2[data-slider-id = "${index}"] .swiper-pagination`,
@@ -248,7 +247,7 @@ $(document).ready(function() {
     // Menu
     $(".burger").click(function() {
         $(this).toggleClass("burger--active")
-        $(".header-bottom__left").toggleClass("header-bottom__left--active")
+        $(".header-mob").toggleClass("header-mob--active")
         $("body").toggleClass("fixed-body")
     })
 
@@ -370,8 +369,12 @@ $(document).ready(function() {
         $(this).text('Добавлен в корзине');
     });
 
-
-    //timer
+    //search
+    $(".search-btn").click(function() {
+            $(this).toggleClass("search-btn--active")
+            $(".search-input").toggleClass("search-input--active")
+        })
+        //timer
     var Update = function() {
         $('.sec').each(function() {
             var count = parseInt($(this).html());

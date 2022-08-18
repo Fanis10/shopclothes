@@ -662,7 +662,7 @@
             line-height: 100%;
             text-transform: uppercase;
             color: #000000;
-            margin: 0 20px;
+            margin: 0 30px;
         }
     }
     &__share {
@@ -752,6 +752,7 @@
             line-height: 134.9%;
             color: #222222;
             margin-top: 20px;
+            padding: 0 25px;
         }
         &-text {
             font-weight: 500;
@@ -759,6 +760,7 @@
             line-height: 134.9%;
             color: #A9A9A9;
             margin-top: 8px;
+            padding: 0 25px;
         }
     }
     &__btn {
@@ -858,7 +860,7 @@
         }
     }
     &__tab {
-        padding: 8px 16px;
+        padding: 8px 28px;
         font-weight: 600;
         font-size: 13px;
         line-height: 16px;
@@ -1127,17 +1129,14 @@
             margin-left: unset;
         }
         &__title {
-            font-size: 30px;
             color: #FFFFFF;
         }
         &__text {
-            font-size: 14px;
             color: #FFFFFF;
-            margin-top: 10px;
+            margin-top: 25px;
         }
         &__btn {
-            font-size: 14px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         &__btn2 {
             background-color: #000000;
@@ -1234,6 +1233,14 @@
                 display: none;
             }
         }
+        &__content {
+            &-title {
+                padding: 0 12px;
+            }
+            &-text {
+                padding: 0 12px;
+            }
+        }
     }
     .stories {
         padding-top: 110px;
@@ -1301,6 +1308,13 @@
             &:not(:first-child) {
                 margin-left: 8px;
             }
+        }
+        &__text {
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        &__btn {
+            margin-top: 60px;
         }
         &__item {
             &-title {

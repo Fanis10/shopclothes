@@ -627,6 +627,15 @@ input.error {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .hover {
+        &__img {
+            height: 430px;
+            object-fit: cover;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .display2 {
         font-size: 18px;

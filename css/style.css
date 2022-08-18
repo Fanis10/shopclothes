@@ -715,6 +715,12 @@ input.error {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 992px) {
+  .hover__img {
+    height: 430px;
+    object-fit: cover;
+  }
+}
 @media screen and (max-width: 768px) {
   .display2 {
     font-size: 18px;
@@ -4260,7 +4266,7 @@ input.error {
   line-height: 100%;
   text-transform: uppercase;
   color: #000000;
-  margin: 0 20px;
+  margin: 0 30px;
 }
 .product__share {
   position: relative;
@@ -4346,6 +4352,7 @@ input.error {
   line-height: 134.9%;
   color: #222222;
   margin-top: 20px;
+  padding: 0 25px;
 }
 .images__content-text {
   font-weight: 500;
@@ -4353,6 +4360,7 @@ input.error {
   line-height: 134.9%;
   color: #A9A9A9;
   margin-top: 8px;
+  padding: 0 25px;
 }
 .images__btn {
   margin-top: 50px;
@@ -4449,7 +4457,7 @@ input.error {
   padding: 25px 50px 0;
 }
 .picker__tab {
-  padding: 8px 16px;
+  padding: 8px 28px;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
@@ -4685,17 +4693,14 @@ input.error {
     margin-left: unset;
   }
   .brands__title {
-    font-size: 30px;
     color: #FFFFFF;
   }
   .brands__text {
-    font-size: 14px;
     color: #FFFFFF;
-    margin-top: 10px;
+    margin-top: 25px;
   }
   .brands__btn {
-    font-size: 14px;
-    margin-top: 20px;
+    margin-top: 25px;
   }
   .brands__btn2 {
     background-color: #000000;
@@ -4792,6 +4797,12 @@ input.error {
   .images .swiper-button-prev {
     display: none;
   }
+  .images__content-title {
+    padding: 0 12px;
+  }
+  .images__content-text {
+    padding: 0 12px;
+  }
 
   .stories {
     padding-top: 110px;
@@ -4849,6 +4860,13 @@ input.error {
   }
   .brands .swiper-pagination-bullet:not(:first-child) {
     margin-left: 8px;
+  }
+  .brands__text {
+    font-size: 17px;
+    margin-top: 20px;
+  }
+  .brands__btn {
+    margin-top: 60px;
   }
   .brands__item-title {
     font-size: 16px;

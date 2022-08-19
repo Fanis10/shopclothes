@@ -42,7 +42,17 @@
     color: #4D4D4D; }
     .aside__item-link--active {
       font-weight: 600;
-      text-decoration: underline; }
+      padding-bottom: 1px; }
+      .aside__item-link--active a {
+        position: relative; }
+        .aside__item-link--active a::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          border-bottom: 1px solid #000000; }
     .aside__item-link:not(:first-child) {
       margin-top: 15px; }
 

@@ -1123,7 +1123,7 @@
             display: block;
             &-left {
                 width: 100%;
-                background-image: url(../img/brands2.webp);
+                background-image: url(../img/brands-mob.webp);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
@@ -1351,7 +1351,7 @@
             margin-top: 20px;
         }
         &__btn {
-            margin-top: 60px;
+            margin-top: 70px;
         }
         &__item {
             flex-direction: column;
@@ -1484,7 +1484,7 @@
                 margin-left: 4px;
             }
             label {
-                padding: 8px 25px;
+                padding: 5px 24px;
             }
         }
     }
@@ -1615,7 +1615,7 @@
         }
         &__radio-btn {
             label {
-                padding: 5px 20px;
+                padding: 5px 19px;
             }
         }
     }
@@ -1626,6 +1626,16 @@
             }
             &-body {
                 padding: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .product {
+        &__radio-btn {
+            label {
+                padding: 3px 15px;
             }
         }
     }

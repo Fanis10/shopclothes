@@ -55,7 +55,19 @@
             line-height: 17px;
             &--active {
                 font-weight: 600;
-                text-decoration: underline;
+                padding-bottom: 1px;
+                a {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 1px;
+                        width: 100%;
+                        border-bottom: 1px solid #000000;
+                    }
+                }
             }
             color: #4D4D4D;
             &:not(:first-child) {

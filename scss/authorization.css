@@ -1,0 +1,20 @@
+.authorization {
+  padding: 50px 0 1241px; }
+  .authorization__inner {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px; }
+  .authorization__info {
+    margin: 18px 0;
+    padding: 0; }
+
+@media screen and (max-width: 768px) {
+  .authorization {
+    padding: 30px 0; }
+    .authorization__inner {
+      margin-top: 30px; }
+    .authorization__info {
+      display: block; } }
+
+/*# sourceMappingURL=authorization.css.map */

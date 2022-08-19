@@ -54,7 +54,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 134.9%;
-  color: #222222; }
+  color: #222222;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; }
 .card__item-colors {
   display: flex;
   align-items: center;
@@ -216,6 +220,27 @@
   .form-group--min input[type="date"]:focus::before,
   .form-group--min input[type="date"]:valid::before {
     display: none; }
+.form-group__radio-inner {
+  display: flex;
+  align-items: center; }
+.form-group__radio input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  cursor: pointer; }
+  .form-group__radio input:checked + label {
+    color: #000000; }
+.form-group__radio label {
+  font-size: 13px;
+  line-height: 134.9%;
+  color: #B4B4B4;
+  padding: 10px 30px;
+  background: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  position: relative;
+  display: flex; }
 .form-group:not(:first-child) {
   margin-top: 18px; }
 .form-group input {

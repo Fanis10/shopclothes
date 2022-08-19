@@ -198,6 +198,53 @@
             &--two {
                 margin-bottom: 15px;
             }
+            .input__hint {
+                position: absolute;
+                z-index: 2;
+                top: 43px;
+                left: 0;
+                width: 100%;
+                display: none;
+                background: #FFFFFF;
+                max-height: 265px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                &::-webkit-scrollbar {
+                    width: 3px;
+                    height: 10px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: #D9D9D9;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #000000;
+                }
+                &--active {
+                    display: flex;
+                }
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 12px;
+                    &:not(:first-child) {
+                        border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    }
+                }
+                &-img {
+                    flex-shrink: 0;
+                    margin-right: 15px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &-subtitle {
+                    margin-top: 8px;
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #9C9C9C;
+                    text-align: start;
+                }
+            }
             .search-input {
                 width: 285px;
                 height: 45px;
@@ -210,11 +257,13 @@
                 padding: 0 15px;
             }
             .search-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
                 width: 45px;
                 height: 45px;
                 cursor: pointer;
                 padding: 0;
-                background: #F5F5F5;
                 float: right;
                 .icon-close {
                     display: none;
@@ -319,6 +368,10 @@
                 input::placeholder {
                     display: none;
                 }
+                .input__hint {
+                    left: -240px;
+                    width: 285px;
+                }
                 .search-input {
                     width: 0;
                     padding: 0;
@@ -417,11 +470,22 @@
 
 @media screen and (max-width: 576px) {
     .header {
+        &-top {
+            &__text {
+                max-width: 235px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
         &-bottom {
             .search-input {
                 &--active {
                     width: 225px;
                 }
+            }
+            .input__hint {
+                left: -180px;
+                width: 225px;
             }
             &__bottom {
                 display: none;
@@ -448,6 +512,10 @@
                 &--active {
                     width: 180px;
                 }
+            }
+            .input__hint {
+                left: -135px;
+                width: 180px;
             }
         }
     }

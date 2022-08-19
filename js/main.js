@@ -269,6 +269,17 @@ $(document).ready(function() {
         $("body").toggleClass("fixed-body")
     })
 
+    // input search
+    $(".header-bottom__search input").on("input", function() {
+        let val = $(this).val()
+
+        if (val.length > 3) {
+            $(".input__hint").addClass('input__hint--active')
+        } else {
+            $(".input__hint").removeClass('input__hint--active')
+        }
+    })
+
     // Tab
     $(function() {
         $(".picker__content").not(":first").hide()

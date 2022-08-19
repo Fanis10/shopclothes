@@ -68,6 +68,9 @@
         &:not(:first-child) {
             margin-top: 20px;
         }
+        &-subtitle {
+            padding-left: 5px;
+        }
         &-show {
             border-bottom: 1px solid #EAEAEA;
             padding: 15px;

@@ -189,6 +189,11 @@
             align-items: center;
             &-mob {
                 display: none;
+                .icon-search {
+                    path {
+                        fill: #7A7A7A;
+                    }
+                }
             }
             &--two {
                 margin-bottom: 15px;
@@ -269,7 +274,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
     .header {
         &-top {
             padding: 10px 0;
@@ -324,6 +329,11 @@
                         width: 285px;
                         transition: all 0.3s;
                         padding: 0 15px;
+                    }
+                }
+                .icon-search {
+                    path {
+                        fill: #000000;
                     }
                 }
                 .search-btn {

@@ -17,12 +17,14 @@
       font-weight: 700;
       font-size: 14px;
       color: #FFFFFF;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-transform: uppercase; }
     .footer__item-address {
       font-size: 14px;
       line-height: 134.9%;
       color: #FFFFFF;
-      max-width: 160px; }
+      max-width: 160px;
+      text-transform: uppercase; }
     .footer__item-telephone {
       font-size: 14px;
       line-height: 134.9%;
@@ -113,11 +115,11 @@
 
 @media screen and (max-width: 1450px) {
   .footer__item:not(:last-child) {
-    margin-right: 115px; } }
+    margin-right: 100px; } }
 @media screen and (max-width: 1200px) {
   .footer__items {
     justify-content: start; } }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .footer__inner {
     padding: 0 30px; }
   .footer__logo svg {

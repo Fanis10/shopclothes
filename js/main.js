@@ -20,6 +20,7 @@ function sliderImages() {
         breakpoints: {
             320: {
                 slidesPerView: "auto",
+                allowTouchMove: true,
             },
             992: {
                 slidesPerView: 3,
@@ -37,6 +38,7 @@ function sliderProduct() {
         spaceBetween: 10,
         slidesPerView: 2,
         loop: true,
+
         navigation: {
             nextEl: '.product .swiper-button-next',
             prevEl: '.product .swiper-button-prev',
@@ -44,13 +46,18 @@ function sliderProduct() {
         breakpoints: {
             320: {
                 slidesPerView: 2,
+                allowTouchMove: false,
             },
-            576: {
-                slidesPerView: 2,
+            760: {
+                allowTouchMove: false,
             },
-
+            992: {
+                allowTouchMove: true,
+            },
             1450: {
                 slidesPerView: 2,
+                allowTouchMove: true,
+
             },
 
         }
@@ -138,6 +145,17 @@ function cardProducts() {
                 el: `.sale__content-slider2[data-slider-id = "${index}"] .swiper-pagination`,
                 clickable: true,
             },
+            breakpoints: {
+                320: {
+                    allowTouchMove: true,
+                },
+                320: {
+                    allowTouchMove: false,
+                },
+                1450: {
+                    allowTouchMove: true,
+                },
+            }
         })
     })
 };

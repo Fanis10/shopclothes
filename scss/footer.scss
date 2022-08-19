@@ -21,12 +21,14 @@
             font-size: 14px;
             color: #FFFFFF;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
         &-address {
             font-size: 14px;
             line-height: 134.9%;
             color: #FFFFFF;
             max-width: 160px;
+            text-transform: uppercase;
         }
         &-telephone {
             font-size: 14px;
@@ -145,7 +147,7 @@
     .footer {
         &__item {
             &:not(:last-child) {
-                margin-right: 115px;
+                margin-right: 100px;
             }
         }
     }
@@ -159,7 +161,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
     .footer {
         &__inner {
             padding: 0 30px;

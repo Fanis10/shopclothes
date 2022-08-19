@@ -4854,7 +4854,7 @@ input.error {
     margin-top: 25px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .brands__title {
     font-size: 25px;
   }
